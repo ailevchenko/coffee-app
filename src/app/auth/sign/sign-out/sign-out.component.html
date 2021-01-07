@@ -1,0 +1,43 @@
+<form class="signOut" action="/">
+  <div class="signOut__socialButtons"></div>
+
+  <div class="signOut__group">
+    <div class="signOut__icons">
+      <svg class="signOut__icon">
+        <use xlink:href="#user"></use>
+      </svg>
+    </div>
+    <input id="signOut__username" type="text" name="username" placeholder="Имя пользователя или email" autofocus required>
+  </div>
+
+  <div class="signOut__group">
+    <div class="signOut__icons">
+      <svg class="signOut__icon">
+        <use xlink:href="#password"></use>
+      </svg>
+    </div>
+    <input id="signOut__password" type="password" name="password" placeholder="Введите пароль" autofocus required>
+    <div class="show__icon">
+      <svg class="signOut__icon show" (click)="onShowPassword()">
+        <use xlink:href="#show"></use>
+      </svg>
+    </div>
+  </div>
+
+  <div class="signOut__group">
+    <div class="signOut__icons">
+      <svg class="signOut__icon">
+        <use xlink:href="#password"></use>
+      </svg>
+    </div>
+    <input id="signOut__passwordConfirm" type="password" name="password" placeholder="Потвердите пароль" autofocus required>
+    <div class="show__icon">
+      <svg class="signOut__icon show" (click)="onShowConfirmPassword()">
+        <use xlink:href="#show"></use>
+      </svg>
+    </div>
+  </div>
+
+  <button id="signInSubmit" class="signIn__btn" type="submit">Зарегистрироваться</button>
+
+</form>

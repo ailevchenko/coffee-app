@@ -8,7 +8,7 @@ const routes: Routes = [
   {
     path: '', component: MainLayoutComponent, children: [
       {
-        path: '', redirectTo: '/', pathMatch: 'full'
+        path: '', redirectTo: '/auth/sign', pathMatch: 'full'
       },
       {
         path: '', component: DrinkListComponent

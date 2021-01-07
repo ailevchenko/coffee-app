@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { LoginComponent } from './login/login.component';
 import { AuthLayoutComponent } from './shared/auth-layout/auth-layout.component';
+import { SignComponent } from './sign/sign.component';
+import { SignInComponent } from './sign/sign-in/sign-in.component';
+import { SignOutComponent } from './sign/sign-out/sign-out.component';
 
 @NgModule({
   declarations: [
-    LoginComponent,
-    AuthLayoutComponent
+    AuthLayoutComponent,
+    SignComponent,
+    SignInComponent,
+    SignOutComponent,
   ],
   imports: [
     CommonModule,
@@ -15,14 +19,21 @@ import { AuthLayoutComponent } from './shared/auth-layout/auth-layout.component'
       {
         path: '', component: AuthLayoutComponent, children: [
           {
-            path: '', redirectTo: '/auth/login', pathMatch: 'full'
+            path: '', redirectTo: '/auth/sign', pathMatch: 'full'
           },
           {
-            path: 'login', component: LoginComponent
+            path: 'sign', component: SignComponent, children: [
+              {
+                path: 'signIn', component: SignInComponent
+              },
+              {
+                path: 'signOut', component: SignOutComponent
+              }
+            ]
           }
         ]
       }
-    ])
+    ]),
   ],
   exports: [
     RouterModule

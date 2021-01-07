@@ -1,0 +1,29 @@
+<form class="signIn" action="/">
+  <div class="signIn__socialButtons"></div>
+
+  <div class="signIn__group">
+    <div class="signIn__icons">
+      <svg class="signIn__icon">
+        <use xlink:href="#user"></use>
+      </svg>
+    </div>
+    <input id="signIn__username" type="text" name="username" placeholder="Имя пользователя" autofocus required>
+  </div>
+
+  <div class="signIn__group">
+    <div class="signIn__icons">
+      <svg class="signIn__icon">
+        <use xlink:href="#password"></use>
+      </svg>
+    </div>
+    <input id="signIn__password" type="password" name="password" placeholder="Введите пароль" autofocus required>
+    <div class="show__icon">
+      <svg class="signIn__icon show" (click)="onShowPassword()">
+        <use xlink:href="#show"></use>
+      </svg>
+    </div>
+  </div>
+
+  <button id="signInSubmit" class="signIn__btn" type="submit">Авторизоваться</button>
+
+</form>
